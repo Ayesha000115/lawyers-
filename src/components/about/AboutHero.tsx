@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { ChevronRight, Shield, Award } from 'lucide-react';
+import { ChevronRight, Shield, Award, ArrowRight } from 'lucide-react';
+import { WHATSAPP_CONFIG } from '../../data/contactData';
 
 interface AboutHeroProps {
   onNavigate: (href: string) => void;
@@ -125,14 +126,13 @@ export const AboutHero: React.FC<AboutHeroProps> = ({
               className="flex flex-wrap items-center gap-6 pt-2"
             >
               <a
-                href="/contact"
-                onClick={(e) => {
-                  e.preventDefault();
-                  onNavigate('/contact');
-                }}
-                className="bg-[#C99A4A] hover:bg-[#E0B86A] text-[#071A2B] px-8 py-3.5 font-bold text-sm tracking-wide transition-all hover:translate-y-[-2px] shadow-lg cursor-pointer"
+                href={WHATSAPP_CONFIG.getLink()}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group bg-[#C99A4A] hover:bg-[#E0B86A] text-[#071A2B] px-8 py-3.5 font-bold text-sm tracking-wide transition-all duration-300 hover:translate-y-[-2px] shadow-lg flex items-center gap-2 cursor-pointer"
               >
-                <span>Contact Us Now</span>
+                <span>Contact Us on WhatsApp</span>
+                <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
               </a>
 
               <div className="flex items-center gap-3 text-xs text-white/60 font-mono">

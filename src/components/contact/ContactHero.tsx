@@ -129,16 +129,16 @@ export const ContactHero: React.FC<ContactHeroProps> = ({
                 href={WHATSAPP_CONFIG.getLink()}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-[#C99A4A] hover:bg-[#E0B86A] text-[#071A2B] px-8 py-3.5 font-bold text-sm tracking-wide transition-all hover:translate-y-[-2px] shadow-lg flex items-center justify-center gap-2 cursor-pointer"
+                className="group bg-[#C99A4A] hover:bg-[#E0B86A] text-[#071A2B] px-8 py-3.5 font-bold text-sm tracking-wide transition-all duration-300 hover:translate-y-[-2px] shadow-lg flex items-center justify-center gap-2 cursor-pointer"
               >
-                <span>WhatsApp Us</span>
-                <ArrowRight className="w-4 h-4" />
+                <span>Contact Us on WhatsApp</span>
+                <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
               </a>
 
               <a
                 id="hero-call-office-btn"
                 href={PHONE_CONFIG.telUri}
-                className="border border-white/25 hover:border-[#C99A4A] text-white hover:text-[#E0B86A] px-7 py-3.5 font-bold text-sm tracking-wide transition-all hover:bg-white/5 flex items-center justify-center gap-2"
+                className="border border-white/25 hover:border-[#C99A4A] text-white hover:text-[#E0B86A] px-7 py-3.5 font-bold text-sm tracking-wide transition-all duration-300 hover:bg-white/5 flex items-center justify-center gap-2"
               >
                 <Phone className="w-4 h-4 text-[#C99A4A]" />
                 <span>Call Our Office</span>

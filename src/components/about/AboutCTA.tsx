@@ -31,9 +31,9 @@ export const AboutCTA: React.FC<AboutCTAProps> = ({ onNavigate }) => {
             href={WHATSAPP_CONFIG.getLink()}
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full sm:w-auto bg-[#C99A4A] hover:bg-[#E0B86A] text-[#071A2B] px-8 py-3.5 font-bold text-sm tracking-wide transition-all hover:translate-y-[-2px] flex items-center justify-center gap-2 cursor-pointer shadow-lg"
+            className="w-full sm:w-auto bg-[#C99A4A] hover:bg-[#E0B86A] text-[#071A2B] px-8 py-3.5 font-bold text-sm tracking-wide transition-all duration-300 hover:translate-y-[-2px] flex items-center justify-center gap-2 cursor-pointer shadow-lg"
           >
-            <span>WhatsApp Us</span>
+            <span>Contact Us on WhatsApp</span>
             <ArrowRight className="w-4 h-4" />
           </a>
 

@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import { ArrowRight, Shield, ArrowUpRight } from 'lucide-react';
+import { WHATSAPP_CONFIG } from '../data/contactData';
 
 interface HeroSectionProps {
   onNavigate: (href: string) => void;
@@ -26,7 +27,6 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
             backgroundSize: '48px 48px',
           }}
         />
-        <div className="absolute top-0 right-0 w-1/2 h-full bg-[#0B2238]/30 hidden lg:block" />
       </div>
 
       <div className="relative max-w-7xl mx-auto px-6 lg:px-12 w-full">
@@ -75,15 +75,13 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
               {/* Primary CTA */}
               <a
                 id="hero-primary-cta"
-                href="/contact"
-                onClick={(e) => {
-                  e.preventDefault();
-                  onNavigate('/contact');
-                }}
-                className="bg-[#C99A4A] hover:bg-[#E0B86A] text-[#071A2B] px-8 py-3.5 font-bold text-sm tracking-wide hover:translate-y-[-2px] transition-all shadow-md flex items-center justify-center gap-2 cursor-pointer rounded-none sm:rounded-sm"
+                href={WHATSAPP_CONFIG.getLink()}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group bg-[#C99A4A] hover:bg-[#E0B86A] text-[#071A2B] px-8 py-3.5 font-bold text-sm tracking-wide hover:translate-y-[-2px] hover:shadow-lg transition-all duration-300 shadow-md flex items-center justify-center gap-2 cursor-pointer rounded-none sm:rounded-sm"
               >
-                <span>Contact Us Now</span>
-                <ArrowRight className="w-4 h-4" />
+                <span>Contact Us on WhatsApp</span>
+                <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
               </a>
 
               {/* Secondary CTA */}
@@ -93,7 +91,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                   e.preventDefault();
                   onNavigate('/practice-areas');
                 }}
-                className="border border-white/20 px-8 py-3.5 font-bold text-sm text-white hover:bg-white/5 transition-all flex items-center justify-center gap-2 rounded-none sm:rounded-sm"
+                className="border border-white/20 px-8 py-3.5 font-bold text-sm text-white hover:bg-white/5 transition-all duration-300 flex items-center justify-center gap-2 rounded-none sm:rounded-sm"
               >
                 <span>Explore Practice Areas</span>
                 <ArrowUpRight className="w-4 h-4 text-[#C99A4A]" />

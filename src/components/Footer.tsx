@@ -1,6 +1,6 @@
 import React from 'react';
 import { FirmLogo } from './FirmLogo';
-import { MapPin, Phone, Mail, ArrowUpRight, MessageCircle } from 'lucide-react';
+import { MapPin, Phone, Mail, ArrowUpRight, MessageCircle, ArrowRight } from 'lucide-react';
 import { PHONE_CONFIG, WHATSAPP_CONFIG } from '../data/contactData';
 
 interface FooterProps {
@@ -38,20 +38,14 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
             </p>
 
             <div className="flex flex-wrap items-center gap-3">
-              <button
-                onClick={() => onNavigate('/contact')}
-                className="px-5 py-2.5 bg-[#C99A4A] hover:bg-[#E0B86A] text-[#071A2B] text-xs font-bold uppercase tracking-wider transition-colors cursor-pointer"
-              >
-                Contact Us Now
-              </button>
               <a
                 href={WHATSAPP_CONFIG.getLink()}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-4 py-2.5 bg-[#25D366]/15 hover:bg-[#25D366]/25 border border-[#25D366]/40 text-[#25D366] text-xs font-bold uppercase tracking-wider transition-colors inline-flex items-center gap-1.5"
+                className="px-5 py-2.5 bg-[#C99A4A] hover:bg-[#E0B86A] text-[#071A2B] text-xs font-bold uppercase tracking-wider transition-all duration-300 hover:translate-y-[-1px] cursor-pointer inline-flex items-center gap-2 shadow-sm"
               >
-                <MessageCircle className="w-3.5 h-3.5 fill-[#25D366]" />
-                <span>WhatsApp Us</span>
+                <span>Contact Us on WhatsApp</span>
+                <ArrowRight className="w-3.5 h-3.5" />
               </a>
             </div>
           </div>

@@ -36,19 +36,19 @@ export const FinalCTA: React.FC<FinalCTAProps> = ({ onNavigate }) => {
             href={WHATSAPP_CONFIG.getLink()}
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full sm:w-auto bg-[#C99A4A] hover:bg-[#E0B86A] text-[#071A2B] px-8 py-3.5 font-bold text-sm tracking-wide hover:translate-y-[-2px] transition-all flex items-center justify-center gap-2 cursor-pointer shadow-lg"
+            className="w-full sm:w-auto bg-[#C99A4A] hover:bg-[#E0B86A] text-[#071A2B] px-8 py-3.5 font-bold text-sm tracking-wide hover:translate-y-[-2px] transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer shadow-lg"
           >
-            <span>WhatsApp Us</span>
+            <span>Contact Us on WhatsApp</span>
             <ArrowRight className="w-4 h-4" />
           </a>
 
           <a
             id="home-final-cta-call-btn"
             href={PHONE_CONFIG.telUri}
-            className="w-full sm:w-auto border border-white/20 px-8 py-3.5 font-bold text-sm text-white hover:bg-white/5 transition-all flex items-center justify-center gap-2"
+            className="w-full sm:w-auto border border-white/20 px-8 py-3.5 font-bold text-sm text-white hover:bg-white/5 transition-all duration-300 flex items-center justify-center gap-2"
           >
             <PhoneCall className="w-4 h-4 text-[#C99A4A]" />
-            <span>Call {PHONE_CONFIG.displayNumber}</span>
+            <span>Call Our Office</span>
           </a>
 
           <a

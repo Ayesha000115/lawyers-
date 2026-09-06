@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { FirmLogo } from './FirmLogo';
 import { NAV_LINKS } from '../data/firmData';
-import { PHONE_CONFIG } from '../data/contactData';
+import { PHONE_CONFIG, WHATSAPP_CONFIG } from '../data/contactData';
 import { Menu, X, ArrowRight, Phone } from 'lucide-react';
 
 interface HeaderProps {
@@ -93,24 +93,28 @@ export const Header: React.FC<HeaderProps> = ({
             <span>{PHONE_CONFIG.displayNumber}</span>
           </a>
 
-          <button
+          <a
             id="header-consultation-btn"
-            onClick={handleConsultationClick}
-            className="bg-[#C99A4A] hover:bg-[#E0B86A] text-[#071A2B] px-6 py-2.5 text-sm font-bold tracking-wide transition-all hover:translate-y-[-1px] shadow-sm flex items-center gap-2 cursor-pointer"
+            href={WHATSAPP_CONFIG.getLink()}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group bg-[#C99A4A] hover:bg-[#E0B86A] text-[#071A2B] px-6 py-2.5 text-sm font-bold tracking-wide transition-all duration-300 hover:translate-y-[-1px] shadow-sm hover:shadow-md flex items-center gap-2 cursor-pointer"
           >
-            <span>Contact Us Now</span>
-            <ArrowRight className="w-3.5 h-3.5" />
-          </button>
+            <span>Contact Us on WhatsApp</span>
+            <ArrowRight className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-1" />
+          </a>
         </div>
 
         {/* Mobile Menu Trigger */}
         <div className="flex items-center space-x-3 lg:hidden">
-          <button
-            onClick={handleConsultationClick}
+          <a
+            href={WHATSAPP_CONFIG.getLink()}
+            target="_blank"
+            rel="noopener noreferrer"
             className="px-3 py-1.5 bg-[#C99A4A] text-[#071A2B] font-bold text-xs tracking-wider"
           >
-            Contact
-          </button>
+            WhatsApp
+          </a>
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className="p-2 text-white/80 hover:text-white hover:bg-white/10 rounded focus:outline-none"
@@ -142,13 +146,16 @@ export const Header: React.FC<HeaderProps> = ({
           </div>
 
           <div className="pt-2">
-            <button
-              onClick={handleConsultationClick}
-              className="w-full py-3 bg-[#C99A4A] text-[#071A2B] font-semibold text-xs uppercase tracking-widest rounded flex items-center justify-center gap-2"
+            <a
+              href={WHATSAPP_CONFIG.getLink()}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="w-full py-3 bg-[#C99A4A] text-[#071A2B] font-bold text-xs uppercase tracking-widest flex items-center justify-center gap-2"
             >
-              <span>Contact Us</span>
+              <span>Contact Us on WhatsApp</span>
               <ArrowRight className="w-4 h-4" />
-            </button>
+            </a>
             <p className="text-center text-[11px] text-white/50 mt-2">
               Confidential • Strategic • Client-Focused
             </p>

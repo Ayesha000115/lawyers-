@@ -112,9 +112,9 @@ export const DirectContactSection: React.FC = () => {
                 href={whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-[#C99A4A] hover:bg-[#E0B86A] text-[#071A2B] px-8 py-4 font-bold text-sm tracking-wide transition-all shadow-md group/btn"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-[#C99A4A] hover:bg-[#E0B86A] text-[#071A2B] px-8 py-4 font-bold text-sm tracking-wide transition-all duration-300 shadow-md group/btn"
               >
-                <span>WhatsApp Us</span>
+                <span>Contact Us on WhatsApp</span>
                 <ArrowRight className="w-4 h-4 transform group-hover/btn:translate-x-1 transition-transform" />
               </a>
             </div>
@@ -166,9 +166,9 @@ export const DirectContactSection: React.FC = () => {
               <a
                 id="contact-call-office-btn"
                 href={PHONE_CONFIG.telUri}
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-[#C99A4A] hover:bg-[#E0B86A] text-[#071A2B] px-8 py-4 font-bold text-sm tracking-wide transition-all shadow-md group/btn"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-[#C99A4A] hover:bg-[#E0B86A] text-[#071A2B] px-8 py-4 font-bold text-sm tracking-wide transition-all duration-300 shadow-md group/btn"
               >
-                <span>Call {PHONE_CONFIG.displayNumber}</span>
+                <span>Call Our Office</span>
                 <ArrowRight className="w-4 h-4 transform group-hover/btn:translate-x-1 transition-transform" />
               </a>
             </div>
