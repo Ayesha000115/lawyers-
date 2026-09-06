@@ -1,0 +1,6 @@
+{
+  "name": "Veritas Law Group",
+  "description": "Strategic legal counsel for businesses, executives, and entrepreneurs navigating complex decisions, transactions, and opportunities.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
